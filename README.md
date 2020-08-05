@@ -1,4 +1,3 @@
-# taskratchet-docs
 The Todo List with Teeth
 
 [Main Site](https://taskratchet.com)

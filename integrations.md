@@ -1,6 +1,6 @@
-# Integrations
+## Integrations
 
-## Beeminder
+### Beeminder
 
 - Navigate to your account settings.
 - Click "Enable Beeminder integration."
