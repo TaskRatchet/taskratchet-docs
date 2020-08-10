@@ -27,8 +27,7 @@ required to use TaskRatchet.
 ### How do I unsubscribe from daily emails?
 
 I am currently working hard on adding email preferences and unsubscribe to TaskRatchet, but I haven't completed it yet.
-If you really need to stop the emails, email me at nathan@taskratchet.com and I can deactivate your account until email
-preferences have been added.
+Until then, email me at nathan@taskratchet.com and I can manually unsubscribe you from daily emails.
 
 ### How can I deactivate or delete my account?
 
