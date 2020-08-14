@@ -7,5 +7,6 @@ You decide what you want to do, when you want to do it by, and how much you’ll
 - [Frequently Asked Questions](faq.md)
 - [Integrations](integrations.md)
 
-Still have questions? Send your questions and feedback to nathan@taskratchet.com and Nathan will email you as soon as
-he can.
+Still have questions? Send me an email:
+
+**Support:** <a href="mailto:nathan@taskratchet.com" target="_blank" rel="nofollow noopener">nathan@taskratchet.com</a>
