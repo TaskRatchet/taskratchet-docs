@@ -9,4 +9,4 @@ You decide what you want to do, when you want to do it by, and how much you’ll
 
 Still have questions? Send me an email:
 
-**Support:** <a href="mailto:nathan@taskratchet.com" target="_blank" rel="nofollow noopener">nathan@taskratchet.com</a>
+**Support:** nathan@taskratchet.com
