@@ -6,6 +6,7 @@ You decide what you want to do, when you want to do it by, and how much you’ll
 
 - [Frequently Asked Questions](faq.md)
 - [Integrations](integrations.md)
+- [Timezones](timezones.md)
 
 Still have questions? Send me an email:
 
