@@ -9,5 +9,8 @@
 - You'll be redirected back to your account settings.
 - Add the name of the Beeminder goal you'd like TaskRatchet to post your new tasks to.
 - Click "Save."
-- The integration works by adding 1 to the Beeminder goal you selected every time you create a new task.
-- As yet, there is no way to track completed tasks.
+
+Now, whenever you add a new task, a 1 will be posted to the goal you specified in your account settings.
+
+In addition, you can add a `&goal-name` tag to a task's description to post to a goal on task create, and `*goal-name`
+to post to the goal on task complete.
