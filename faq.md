@@ -1,5 +1,10 @@
 ## Frequently Asked Questions
 
+### What does TaskRatchet do?
+
+TaskRatchet lets you commit money on completing one-off tasks by deadlines you set. It acts like a simple todo list,
+letting you define your tasks and check them off when they are done.
+
 ### Is TaskRatchet free?
 
 Yes! TaskRatchet is free to use forever. You will only be charged if you don't complete a task you've added by the
