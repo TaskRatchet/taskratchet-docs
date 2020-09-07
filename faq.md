@@ -13,10 +13,9 @@ the deadlines you've set.
 
 ### When does TaskRatchet charge me?
 
-Soon after you miss a deadline, TaskRatchet will send you an email letting you know you're about to be charged. You can
-reply to this email to pause the charge and let me know that the charge isn't legit. If you don't reply to the email,
-about 24 hours later a charge will be authorized for the amount of your pledge and show up in your bank account. 24 
-hours after that, the charge will be captured. 
+Soon after you miss a deadline, TaskRatchet will email you letting you know you're about to be charged, and a
+charge will appear in your bank account. You can reply to this email to pause the charge and let me know that the charge 
+isn't legit. Once I've canceled a charge, it will disappear from your bank account.
 
 ### Can I try TaskRatchet out without adding my payment details?
 
