@@ -4,20 +4,20 @@
 
 To enamble the integration, first navigate to your account settings.
 
-![settings link](images/beeminder-1.png)
+<img src="images/beeminder-1.png" width=500 />
 
 Click "Enable Beeminder integration."
 
-![Beeminder enable link](images/beeminder-2.png)
+<img src="images/beeminder-2.png" width=500 />
 
 You'll be redirected to Beeminder's website. Grant TaskRatchet access to your Beeminder account.
 
-![grant access screen](images/beeminder-3.png)
+<img src="images/beeminder-3.png" width=500 />
 
 You'll be redirected back to your account settings. Add the name of the Beeminder goal you'd like TaskRatchet to post 
 your new tasks to, then click "Save."
 
-![integration settings](images/beeminder-4.png)
+<img src="images/beeminder-4.png" width=500 />
 
 Now, whenever you add a new task, a 1 will be posted to the goal you specified in your account settings.
 
