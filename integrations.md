@@ -2,7 +2,31 @@
 
 ### Beeminder
 
-To enamble the integration, first navigate to your account settings.
+#### Features
+
+Enabling the Beeminder integration gives you three new features:
+
+##### Automatically post every task you create to a Beeminder goal.
+
+Example: If you set the Beeminder goal field in your account settings to `tasks`, TaskRatchet will try to post a 
+datapoint to your `tasks` goal every time you create a new TaskRatchet task. The datapoint's comment will include your
+task's description, deadline, and stakes. The datapoint's value will be `1`. 
+
+##### Post to any Beeminder goal when you create a task by including a `&goal-name` tag in the task's description.
+
+Example: If you create a task with the description "Send monthly report &work-tasks", TaskRatchet will immediately try
+to post a datapoint to your `work-tasks` goal. The datapoint's comment will include your task's description, deadline, 
+and stakes. The datapoint's value will be `1`. 
+
+##### Post to any Beeminder goal when you complete a task by including a `*goal-name` tag in the task's description.
+
+Example: If you create a task with the description "Do the laundry *done", TaskRatchet will wait until you complete the 
+task, and then try to post a datapoint to your `done` goal. The datapoint's comment will include your task's 
+description, deadline, and stakes. The datapoint's value will be `1`.
+
+#### Enable Beeminder Integration
+
+To enable the integration, first navigate to your account settings.
 
 <img src="images/beeminder-1.png" width=500 />
 
