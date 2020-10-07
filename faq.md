@@ -28,10 +28,9 @@ Currently you can, but this isn't by design. Since any charges for late tasks wo
 details, TaskRatchet won't be able to enforce the commitments you've made. In the future, payment details will be
 required to use TaskRatchet.
 
-### How do I unsubscribe from daily emails?
+### How do I unsubscribe from the daily summary emails?
 
-I am currently working hard on adding email preferences and unsubscribe to TaskRatchet, but I haven't completed it yet.
-Until then, email me at nathan@taskratchet.com and I can manually unsubscribe you from daily emails.
+Email me at nathan@taskratchet.com and I can unsubscribe you from the daily emails.
 
 ### How can I deactivate or delete my account?
 
