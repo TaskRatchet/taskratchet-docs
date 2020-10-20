@@ -1,7 +1,10 @@
 ## Friends & Competitors
 
 TaskRatchet isn't the only option around! If you find TaskRatchet interesting, we think you'll
-like these tools, too:
+like these tools, too.
+
+- [Boss as a Service](https://bossasaservice.life/) - "We make sure you achieve your goals. We keep you accountable. You get stuff done."
+- [Complice](https://complice.co/) - "Complice is for making meaningful progress every day."
 
 ### Commitment Contracts
 
