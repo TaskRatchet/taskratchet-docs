@@ -10,6 +10,13 @@ When adding a task, TaskRatchet asks you for three pieces of information:
 - A deadline, specified as a date and time.
 - The amount of money you'll be charged if you don't complete it in time.
 
+### Get Reminded
+
+Currently, the only reminder that TaskRatchet has is a daily summary email which includes all your tasks you haven't yet
+completed. This is almost certainly not the optimal solution. If you have opinions regarding how reminders should work,
+please email me at nathan@taskratchet.com. The more feedback I can get on how people would like reminders to work, the
+better!
+
 ### Complete the Task
 
 If all goes well, you check off the task in your list before the deadline comes, and that's it! You won't be charged
