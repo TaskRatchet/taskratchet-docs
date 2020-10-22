@@ -26,13 +26,12 @@ for that task.
 
 If you don't mark the task as complete on time, a series of events are triggered:
 
-- Within 6 hours of the deadline TaskRatchet will email you telling you that you're about to be charged. At this point, 
-  you can reply to the email saying the charge isn't legit, and the charge will be immediately stopped until I can work 
-  out with you what should be done.
-- Within 30 hours of the deadline TaskRatchet will initiate a charge which will show up in your bank, but won't have
+- Between 0 and 6 hours after the deadline passed TaskRatchet will email you telling you that you're about to be charged. At this point, 
+  you can reply to the email saying the charge isn't legit, and the charge will be immediately paused until I can respond to your email.
+- Between 24 and 30 hours after the deadline passed TaskRatchet will initiate a charge which will show up in your bank, but won't have
   yet been finalized. At this point you can still ask me to cancel the charge, and I can cancel it without the money
   actually leaving your account.
-- Within 54 hours of the deadline TaskRatchet will finalize the charge, removing the money from your account. If the 
+- Between 48 and 54 hours after the deadline passed TaskRatchet will finalize the charge, removing the money from your account. If the 
   charge really wasn't legit and you're only getting around to telling me, don't worry! I can still refund you the
   charge.
 
