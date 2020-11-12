@@ -24,9 +24,9 @@ isn't legit. Once I've canceled a charge, it will disappear from your bank accou
 
 ### Can I try TaskRatchet out without adding my payment details?
 
-Currently you can, but this isn't by design. Since any charges for late tasks won't succeed without valid payment
-details, TaskRatchet won't be able to enforce the commitments you've made. In the future, payment details will be
-required to use TaskRatchet.
+TaskRatchet is not designed to be used without a payment method. Since any charges for late tasks won't succeed without 
+valid payment details, TaskRatchet won't be able to enforce the commitments you've made. For that reason, new users
+are required to add a payment method during the registration process.
 
 ### How do I unsubscribe from the daily summary emails?
 
