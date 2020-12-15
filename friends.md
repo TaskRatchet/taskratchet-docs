@@ -1,7 +1,7 @@
 ## Friends & Competitors
 
 TaskRatchet isn't the only option around! If you find TaskRatchet interesting, we think you'll
-like these tools, too.
+like these tools, too. Have a tool you think should be included in this list? [Submit a pull request][1].
 
 - [Boss as a Service](https://bossasaservice.life/) - "We make sure you achieve your goals. We keep you accountable. You get stuff done."
 - [Complice](https://complice.co/) - "Complice is for making meaningful progress every day."
@@ -26,3 +26,5 @@ beat procrastination, feel in control and finish your to-do list."
 from the command line. It is flexible, fast, and unobtrusive. It does its job then gets out of your way."
 - [Todoist](https://todoist.com/) - "Regain clarity and calmness by getting all those tasks out of your head and onto 
 your to-do list (no matter where you are or what device you use)."
+
+[1]: https://github.com/narthur/taskratchet-docs/edit/master/friends.md
