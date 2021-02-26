@@ -14,6 +14,7 @@ auto-report — and we'll show your progress and a Yellow Brick Road to follow t
 pledge money to stay on the road the next time. If you go off track again, we charge you."
 - [commits.to](http://commits.to/) - "Create a commitment by constructing a URL like "alice.commits.to/send_the_report" 
 and just by clicking on such a URL, a commitment is logged here."
+- [stepbet](https://waybetter.com/stepbet) - "Achieve your fitness goals by putting real money on the line. Connect your favorite fitness tracker and beat your personalized step goals to win."
 - [stickK](https://www.stickk.com/) - "By asking our users to sign Commitment Contracts, stickK helps users define their 
 goal (whatever it may be), acknowledge what it’ll take to accomplish it, and leverage the power of putting money on the 
 line to turn that goal into a reality."
