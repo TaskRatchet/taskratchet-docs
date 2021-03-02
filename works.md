@@ -6,9 +6,9 @@ TaskRatchet is the only todo list that makes you do the tasks you add.
 
 When adding a task, TaskRatchet asks you for three pieces of information:
 
-- Task: The definition of the task--what is it you need to do?
-- Deadline: A deadline, specified as a date and time.
-- Stakes: The amount of money you'll be charged if you don't complete it in time.
+- **Task:** The definition of the task--what is it you need to do?
+- **Deadline:** A deadline, specified as a date and time.
+- **Stakes:** The amount of money you'll be charged if you don't complete it in time.
 
 ### Get Reminded
 
