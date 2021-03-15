@@ -26,13 +26,11 @@ for that task.
 
 If you don't mark the task as complete on time, a series of events are triggered within specific time periods after the task's deadline:
 
-- **0-6 hours:** TaskRatchet will email you telling you that you're about to be charged. At this point, 
-  you can reply to the email saying the charge isn't legit, and the charge will be immediately paused until I can respond to your email.
-- **24-30 hours:** TaskRatchet will initiate a charge which will show up in your bank, but won't have
-  yet been finalized. At this point you can still ask me to cancel the charge, and I can cancel it without the money
-  actually leaving your account.
-- **48-54 hours:** TaskRatchet will finalize the charge, removing the money from your account. If you failed to call not-legit before 
-  this point, don't worry! I can still issue you a refund.
+Window        | Event | Calling Not-Legit
+--------------|-------|-------------------
+**0-6 hrs**   | TaskRatchet sends you a charge notification email. | Reply direclty to the charge email to pause the charge until I can respond.
+**24-30 hrs** | TaskRatchet initiates a charge which will appear in your bank without removing the money. | If you email me in time, I can cancel the charge without any funds being removed from your account.
+**48-54 hrs** | TaskRatchet removes the money from your bank. | Calling not-legit at this point will result in a refund.
 
 ### Calling a Charge Not Legit
 
