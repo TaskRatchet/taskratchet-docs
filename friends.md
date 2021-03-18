@@ -23,6 +23,7 @@ line to turn that goal into a reality."
 
 - [Amazing Marvin](https://amazingmarvin.com/) - "Marvin incorporates principles from behavioral psychology to help you 
 beat procrastination, feel in control and finish your to-do list."
+- [Habitica](https://habitica.com/static/home) - "Habitica is a free habit-building and productivity app that treats your real life like a game. With in-game rewards and punishments to motivate you and a strong social network to inspire you, Habitica can help you achieve your goals to become healthy, hard-working, and happy."
 - [Taskwarrior](https://taskwarrior.org/) - "Taskwarrior is Free and Open Source Software that manages your TODO list 
 from the command line. It is flexible, fast, and unobtrusive. It does its job then gets out of your way."
 - [Todoist](https://todoist.com/) - "Regain clarity and calmness by getting all those tasks out of your head and onto 
