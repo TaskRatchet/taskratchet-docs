@@ -6,23 +6,19 @@
 
 Enabling the Beeminder integration gives you three new features:
 
-##### Automatically post every task you create to a Beeminder goal.
+Input                                  | Behavior
+---------------------------------------|-----------------------------------------------------------------------
+Any task if goal field set in settings | On creation, posts all new tasks to specified goal
+`The Task &goal-name`                  | On creation, posts tasks with `&`-tags to goal with same name as tag
+`The Task *goal-name`                  | On completion, posts tasks with `*`-tags to goal with same name as tag
 
-Example: If you set the Beeminder goal field in your account settings to `tasks`, TaskRatchet will try to post a 
-datapoint to your `tasks` goal every time you create a new TaskRatchet task. The datapoint's comment will include your
-task's description, deadline, and stakes. The datapoint's value will be `1`. 
+When a task is posted to Beeminder as a new datapoint, the following attributes are set:
 
-##### Post to any Beeminder goal when you create a task by including a `&goal-name` tag in the task's description.
-
-Example: If you create a task with the description "Send monthly report &work-tasks", TaskRatchet will immediately try
-to post a datapoint to your `work-tasks` goal. The datapoint's comment will include your task's description, deadline, 
-and stakes. The datapoint's value will be `1`. 
-
-##### Post to any Beeminder goal when you complete a task by including a `*goal-name` tag in the task's description.
-
-Example: If you create a task with the description "Do the laundry *done", TaskRatchet will wait until you complete the 
-task, and then try to post a datapoint to your `done` goal. The datapoint's comment will include your task's 
-description, deadline, and stakes. The datapoint's value will be `1`.
+Datapoint Field | Value
+----------------|--------------
+Date            | Date task was added, or completed if using `*`-tag
+Value           | Always `1`
+Comment         | Task summary, e.g., `The Task by 3/24/2021, 11:59 PM or pay $10.00`
 
 #### Enable Beeminder Integration
 
