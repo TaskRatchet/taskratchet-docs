@@ -6,11 +6,11 @@
 
 Enabling the Beeminder integration gives you three new features:
 
-Input                                  | Behavior
----------------------------------------|-----------------------------------------------------------------------
-Any task if goal field set in settings | On creation, posts all new tasks to specified goal
-`The Task &goal-name`                  | On creation, posts tasks with `&`-tags to goal with same name as tag
-`The Task *goal-name`                  | On completion, posts tasks with `*`-tags to goal with same name as tag
+Feature                                      | To Use
+---------------------------------------------|-----------------------------------------------------------------------
+Post all new tasks to Beeminder on creation  | Set goal field in account settings, then add any new task
+Post to Beeminder goal(s) on task creation   | Add task with one or more `&`-tags; e.g., `The Task &goal-name`
+Post to Beeminder goal(s) on task completion | Add task with one or more `*`-tags; e.g., `The Task *goal-name`
 
 When a task is posted to Beeminder as a new datapoint, the following attributes are set:
 
