@@ -10,6 +10,10 @@ You decide what you want to do, when you want to do it by, and how much you’ll
 - [Integrations](integrations.md)
 - [Timezones](timezones.md)
 
+Further reading:
+
+- [Announcing TaskRatchet: Like Beeminder for Your Todo List](https://blog.beeminder.com/taskratchet/)
+
 Still have questions? Send me an email:
 
 **Support:** nathan@taskratchet.com
