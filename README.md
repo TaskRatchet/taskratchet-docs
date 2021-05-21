@@ -4,9 +4,10 @@
 
 ## Index
 
-- [How It Works](works.md)
 - [Frequently Asked Questions](faq.md)
 - [Friends & Competitors](friends.md)
+- [Glossary](glossary.md)
+- [How It Works](works.md)
 - [Integrations](integrations.md)
 - [Timezones](timezones.md)
 
