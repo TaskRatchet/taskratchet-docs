@@ -37,7 +37,7 @@ Email me at nathan@taskratchet.com and I can unsubscribe you from the daily emai
 Email me at nathan@taskratchet.com letting me know whether you'd like me to delete or just deactivate your account, and
 I'll get it done as soon as I can.
 
-### Does Beeminder support PayPal?
+### Does TaskRatchet support PayPal?
 
 No, but email me at nathan@taskratchet.com anyway to let me know you're missing it! I'll probably also ask you where 
 you're located and if there are any other payment methods that might work for you.
