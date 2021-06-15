@@ -63,9 +63,8 @@ indicating that the charge was not legit, and the charge will be cancelled or re
 
 ### Schelling Fences
 
-In game theory, a Schelling fence is "a solution that people tend to choose by default in the absence of communication" 
-([Wikipedia](https://en.wikipedia.org/wiki/Focal_point_(game_theory))). [Scott Alexander has extended the
-defintion](https://blog.beeminder.com/schelling/) in the context of behavior change to be a strategy of 
+In game theory, a Schelling point is "a solution that people tend to choose by default in the absence of communication" 
+([Wikipedia](https://en.wikipedia.org/wiki/Focal_point_(game_theory))). [Scott Alexander used the term "Schelling fence"](https://blog.beeminder.com/schelling/) in the context of behavior change to be a strategy of 
 defeating slippery slopes by setting arbitrary boundaries which are worth defending.
 
 For example, the marginal negative outcome from staying up a few more minutes may never be enough to outweigh
