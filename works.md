@@ -29,7 +29,7 @@ If you don't mark the task as complete on time, a series of events are triggered
 
 Window        | Event | Calling Not-Legit
 --------------|-------|-------------------
-**0-6 hrs**   | TaskRatchet sends you a charge notification email. | Reply direclty to the charge email to pause the charge until I can respond.
+**0-6 hrs**   | TaskRatchet sends you a charge notification email. | Reply directly to the charge email to pause the charge until I can respond.
 **24-30 hrs** | TaskRatchet initiates a charge which will appear in your bank without removing the money. | If you email me in time, I can cancel the charge without any funds being removed from your account.
 **48-54 hrs** | TaskRatchet removes the money from your bank. | Calling not-legit at this point will result in a refund.
 
