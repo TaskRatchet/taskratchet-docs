@@ -8,7 +8,7 @@ Enabling the Beeminder integration gives you three new features:
 
 Feature                                      | Format
 ---------------------------------------------|----------------------------
-Post all new tasks to Beeminder on creation  | -
+Post all new tasks to Beeminder on creation  | Applies to all new tasks
 Post to Beeminder goal(s) on task creation   | `[Task Name] &[Goal Slug]`
 Post to Beeminder goal(s) on task completion | `[Task Name] *[Goal Slug]`
 
