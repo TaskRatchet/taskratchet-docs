@@ -12,5 +12,4 @@ the task is due at 6pm in your specified timezone. If you change your timezone, 
 - Use the "Timezone" dropdown to change your timezone
 - Click or tap the "Save" button directly below the "Timezone" dropdown
 
-You should see a "Changes saved" message. Once you do, your timezone has been changed, and all due dates will now be
-treated in reference to your new timezone.
+All due dates will now be treated in reference to your new timezone.
