@@ -48,5 +48,5 @@ TaskRatchet is built and maintained by a single developer, so I may plan to have
 had the time to build yet. Or, maybe I haven't thought of the feature yet! Email me at nathan@taskratchet.com with any
 ideas, suggestions, or feedback. I love hearing your ideas!
 
-You can also suggest and vote for ideas [here](http://allourideas.org/taskratchet), though I would recommend that you
+You can also suggest and vote for ideas [here](https://taskratchet.consider.it/), though I would recommend that you
 also email me, since I keep a separate record of missing features and the users who want them.
