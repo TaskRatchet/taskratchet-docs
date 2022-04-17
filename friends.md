@@ -30,4 +30,10 @@ from the command line. It is flexible, fast, and unobtrusive. It does its job th
 - [Todoist](https://todoist.com/) - "Regain clarity and calmness by getting all those tasks out of your head and onto 
 your to-do list (no matter where you are or what device you use)."
 
+### Attention Management
+
+- [Delay](https://chrome.google.com/webstore/detail/delay/fbhbfbladmbgakfkccbfjpbabagjcmid) - A chrome extension that requires you wait a period of time before visiting a distracting website.
+- [Leechblock](https://www.proginosko.com/leechblock/) - A flexible browser extension for blocking distracting websites.
+- [Mindful Internet Use](https://mindfulinternetuse.com/) - A chrome extension that prompts you to breathe and decide how much time you'll spend before visiting a distracting website.
+
 [1]: https://github.com/narthur/taskratchet-docs/edit/master/friends.md
