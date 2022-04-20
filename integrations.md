@@ -2,6 +2,8 @@
 
 ### Beeminder
 
+[![How to Post to Beeminder using TaskRatchet](http://img.youtube.com/vi/Y_2F9MOD6Bg/0.jpg)](http://www.youtube.com/watch?v=Y_2F9MOD6Bg "How to Post to Beeminder using TaskRatchet")
+
 #### Features
 
 Enabling the Beeminder integration gives you three new features:
