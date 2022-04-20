@@ -2,7 +2,7 @@
 
 ### Beeminder
 
-[![How to Post to Beeminder using TaskRatchet](http://img.youtube.com/vi/Y_2F9MOD6Bg/0.jpg)](http://www.youtube.com/watch?v=Y_2F9MOD6Bg "How to Post to Beeminder using TaskRatchet")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y_2F9MOD6Bg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Features
 
