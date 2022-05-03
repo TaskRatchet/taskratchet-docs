@@ -4,6 +4,7 @@
 
 ## Index
 
+- [Feature Suggestions](https://taskratchet.consider.it/)
 - [Frequently Asked Questions](faq.md)
 - [Friends & Competitors](friends.md)
 - [Glossary](glossary.md)
