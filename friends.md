@@ -18,6 +18,7 @@ and just by clicking on such a URL, a commitment is logged here."
 - [stickK](https://www.stickk.com/) - "By asking our users to sign Commitment Contracts, stickK helps users define their 
 goal (whatever it may be), acknowledge what it’ll take to accomplish it, and leverage the power of putting money on the 
 line to turn that goal into a reality."
+- [Work Or Pay](https://www.workorpay.com/) - "Meet Your Goals Or Pay The Price. Set goals. Form contracts. Pay the penalty if you fail."
 
 ### Task Management
 
