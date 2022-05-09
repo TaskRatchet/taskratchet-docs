@@ -7,4 +7,10 @@ me at <nathan@taskratchet.com>.
 
 You can find your API user ID and token in your account settings.
 
-<https://github.com/narthur/taskratchet-python>
+## Tooling
+
+- <https://github.com/narthur/taskratchet-python>
+
+## Examples
+
+- <https://forum.beeminder.com/t/taskratchet-bookmarklets/10276>
