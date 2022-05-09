@@ -4,6 +4,7 @@
 
 ## Index
 
+- [API](api.md)
 - [Feature Suggestions](https://taskratchet.consider.it/)
 - [Frequently Asked Questions](faq.md)
 - [Friends & Competitors](friends.md)
