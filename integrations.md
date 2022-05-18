@@ -73,3 +73,4 @@ to post to the goal on task complete.
 #### Further Reading
 
 - [Explain Purpose of the “Task Ratchet App” Integration with Beeminder?](https://forum.beeminder.com/t/explain-purpose-of-the-task-ratchet-app-integration-with-beeminder/10288)
+- [TaskRatchet help page at Beeminder](https://help.beeminder.com/article/289-taskratchet)
