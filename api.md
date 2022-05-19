@@ -1,7 +1,8 @@
 # API
 
-| :exclamation:  The API is not stable, and may change at any time.   |
-|---------------------------------------------------------------------|
+<figure style="border: 1px solid red; padding: 1em; display: inline-block;">
+❗ The API is not stable, and may change at any time.
+</figure>
 
 TaskRatchet has an API you can use to list, update, and create new tasks, among other things. 
 Unfortunately, the API is not yet stable enough for me to prioritize documenting it publicly.
