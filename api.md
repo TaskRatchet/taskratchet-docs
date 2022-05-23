@@ -18,3 +18,7 @@ You can find your API user ID and token in your account settings.
 ## Examples
 
 - <https://forum.beeminder.com/t/taskratchet-bookmarklets/10276>
+
+## Schema
+
+Base URL: <https://api.taskratchet.com/api1/>
