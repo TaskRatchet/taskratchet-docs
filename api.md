@@ -22,3 +22,12 @@ You can find your API user ID and token in your account settings.
 ## Schema
 
 Base URL: <https://api.taskratchet.com/api1/>
+
+Endpoint                 | Description
+-------------------------|-------------------------
+`GET me`                 | Get your profile data
+`PUT me`                 | Update your profile data
+`GET me/tasks`           | Get all your tasks
+`POST me/tasks`          | Create a new task
+`GET me/tasks/{task_id}` | Get a specific task
+`PUT me/tasks/{task_id}` | Update a specific task
