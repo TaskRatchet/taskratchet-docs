@@ -6,8 +6,8 @@
 
 TaskRatchet has an API you can use to list, update, and create new tasks, among other things. 
 Unfortunately, the API is not yet stable enough for me to prioritize documenting it publicly.
-If you would like more information regaring how you can use TaskRatchet's API, please email
-me at <nathan@taskratchet.com>.
+If you would like more information regaring how you can use TaskRatchet's API, or you find
+anything in this document that seems inaccurate, please email me at <nathan@taskratchet.com>.
 
 You can find your API user ID and token in your account settings.
 
@@ -31,3 +31,31 @@ Endpoint                 | Description
 `POST me/tasks`          | Create a new task
 `GET me/tasks/{task_id}` | Get a specific task
 `PUT me/tasks/{task_id}` | Update a specific task
+`GET timezones`          | List of valid timezones
+
+### `GET me`
+
+Response Field | Type   | Description
+---------------|--------|--------------------------------------------------------
+id             | string | The account's unique identifier
+name           | string | User's full name
+email          | string | User's email address
+timezone       | string | User's current account timezone
+cards          | array  | List of user's payment methods
+integrations   | object | User's integration settings; currently only Beeminder
+
+### `PUT me`
+
+Input Field  | Type   | Description
+-------------|--------|--------------------------------------------------------
+name         | string | User's full name
+email        | string | User's email address
+timezone     | string | User's timezone; for valid values, see `GET timezones`
+new_password | string | New password
+integrations | object | User's integration settings; currently only Beeminder
+
+Response is the updated user object--see `GET me`.
+
+### `GET timezones`
+
+Returns an array of valid timezone values.
