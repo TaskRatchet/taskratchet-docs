@@ -19,6 +19,15 @@ You can find your API user ID and token in your account settings.
 
 - <https://forum.beeminder.com/t/taskratchet-bookmarklets/10276>
 
+## Authentication
+
+The API uses two custom headers for authentication.
+
+Header                 | Description
+-----------------------|-------------------------------------------------
+`X-Taskratchet-Userid` | Your account ID, found in your account settings
+`X-Taskratchet-Token`  | Your API token, found in your account settings
+
 ## Schema
 
 Base URL: <https://api.taskratchet.com/api1/>
