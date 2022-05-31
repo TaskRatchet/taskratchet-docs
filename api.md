@@ -67,4 +67,4 @@ Response is the updated user object--see `GET me`.
 
 ### `GET timezones`
 
-Returns an array of valid timezone values.
+Returns an array of [valid timezone values](https://api.taskratchet.com/api1/timezones).
