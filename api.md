@@ -53,6 +53,24 @@ timezone       | string | User's current account timezone
 cards          | array  | List of user's payment methods
 integrations   | object | User's integration settings; currently only Beeminder
 
+Example response:
+
+```
+{
+    "id": "Zu0qDVncIgSuUbQfr261",
+    "name": "Jon Doe",
+    "email": "jon@doe.com",
+    "timezone": "America/New_York",
+    "cards": [],
+    "integrations": {
+        "beeminder": {
+            "user": "jondoe",
+            "goal_new_tasks": "tr_tasks"
+        }
+    }
+}
+```
+
 ### `PUT me`
 
 Input Field  | Type   | Description
