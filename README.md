@@ -11,6 +11,7 @@
 - [Glossary](glossary.md)
 - [How It Works](works.md)
 - [Integrations](integrations.md)
+- [Other Projects](other-projects.md)
 - [Timezones](timezones.md)
 - [Working with Tasks](working-with-tasks.md)
 
