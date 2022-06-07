@@ -95,7 +95,7 @@ due           | string  | Task's timezone-agnostic due string
 due_timestamp | number  | Task's precise due time, taking the user's current timezone into account
 cents         | number  | Task's stakes
 complete      | boolean | Whether or not the task has been completed
-status        | string  | One of 'complete', 'expired', or 'pending'
+status        | string  | One of "complete", "expired", or "pending"
 timezone      | string  | The user's current timezone
 
 Example response:
