@@ -93,7 +93,7 @@ Task Field    | Type    | Description
 id            | string  | Task's unique identifier
 task          | string  | Task's title
 due           | string  | Task's timezone-agnostic due string
-due_timestamp | number  | Task's precise due time, taking the user's current timezone into account
+due_timestamp | number  | Task's precise due time, taking the user's current timezone into account. Changing the user's timezone will change this number for all tasks.
 cents         | number  | Task's stakes
 complete      | boolean | Whether or not the task has been completed
 status        | string  | One of "complete", "expired", or "pending"
