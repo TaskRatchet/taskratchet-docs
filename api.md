@@ -85,7 +85,8 @@ Response is the updated user object--see `GET me`.
 
 ### `GET me/tasks`
 
-Returns an array of tasks.
+Returns an array of tasks. Currently it returns all tasks ever associated with the user. In the future
+I hope to update it to be paginated and filterable.
 
 Task Field    | Type    | Description
 --------------|---------|------------------------------------------------------------------------------
