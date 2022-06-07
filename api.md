@@ -83,6 +83,38 @@ integrations | object | User's integration settings; currently only Beeminder
 
 Response is the updated user object--see `GET me`.
 
+### `GET me/tasks`
+
+Returns an array of tasks.
+
+Task Field    | Type    | Description
+--------------|---------|------------------------------------------------------------------------------
+id            | string  | Task's unique identifier
+task          | string  | Task's title
+due           | string  | Task's timezone-agnostic due string
+due_timestamp | number  | Task's precise due time, taking the user's current timezone into account
+cents         | number  | Task's stakes
+complete      | boolean | Whether or not the task has been completed
+status        | string  | One of 'complete', 'expired', or 'pending'
+timezone      | string  | The user's current timezone
+
+Example response:
+
+```
+[
+    {
+        "id": "tdDPzh1GpZHAGZURVBf6",
+        "task": "Take out the trash",
+        "due": "2/21/2022, 11:59 PM",
+        "due_timestamp": 1645505940,
+        "cents": 500,
+        "complete": false,
+        "status": "pending",
+        "timezone": "America/Cancun"
+    }
+]
+```
+
 ### `GET timezones`
 
 Returns an array of [valid timezone values](https://api.taskratchet.com/api1/timezones).
