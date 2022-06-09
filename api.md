@@ -116,6 +116,17 @@ Example response:
 ]
 ```
 
+### `POST me/tasks`
+
+
+Input Field | Type   | Description
+------------|--------|-------------------------------------------------------------
+task        | string | Task title
+due         | string | Due date and time in string of format `3/25/2020, 11:59 PM`
+cents       | number | Stakes in cents
+
+On success, returns the created task.
+
 ### `GET timezones`
 
 Returns an array of [valid timezone values](https://api.taskratchet.com/api1/timezones).
