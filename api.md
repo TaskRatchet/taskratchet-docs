@@ -127,6 +127,21 @@ cents       | number | Stakes in cents
 
 On success, returns the created task.
 
+Example response:
+
+```
+{
+    "id": "tdDPzh1GpZHAGZURVBf6",
+    "task": "Take out the trash",
+    "due": "2/21/2022, 11:59 PM",
+    "due_timestamp": 1645505940,
+    "cents": 500,
+    "complete": false,
+    "status": "pending",
+    "timezone": "America/Cancun"
+}
+```
+
 ### `GET timezones`
 
 Returns an array of [valid timezone values](https://api.taskratchet.com/api1/timezones).
