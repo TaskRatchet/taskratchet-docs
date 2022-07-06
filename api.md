@@ -40,6 +40,7 @@ Endpoint                 | Description
 `POST me/tasks`          | Create a new task
 `GET me/tasks/{task_id}` | Get a specific task
 `PUT me/tasks/{task_id}` | Update a specific task
+`GET status`             | Get API status details
 `GET timezones`          | List of valid timezones
 
 ### `GET me`
@@ -161,6 +162,10 @@ Example respone:
     "timezone": "America/Cancun"
 }
 ```
+
+### `GET status`
+
+Returns details about the API server instance that handled the request. Curretnly only returns the API's internal UTC time. 
 
 ### `GET timezones`
 
