@@ -165,7 +165,7 @@ Example respone:
 
 ### `GET status`
 
-Returns details about the API server instance that handled the request. Curretnly only returns the API's internal UTC time. 
+Returns details about the API server instance that handled the request. Currently only returns the API's internal UTC time. 
 
 ### `GET timezones`
 
