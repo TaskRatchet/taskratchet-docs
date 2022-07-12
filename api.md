@@ -165,7 +165,13 @@ Example respone:
 
 ### `GET status`
 
-Returns details about the API server instance that handled the request. Currently only returns the API's internal UTC time. 
+Returns [details](https://api.taskratchet.com/api1/status) about the API server instance that handled the request. Currently only returns the API's internal UTC time. Example response:
+
+```
+{
+    "utc_now": "2022-07-12T18:52:41.647995+00:00"
+}
+```
 
 ### `GET timezones`
 
