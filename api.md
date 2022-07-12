@@ -165,7 +165,9 @@ Example respone:
 
 ### `GET status`
 
-Returns [details](https://api.taskratchet.com/api1/status) about the API server instance that handled the request. Currently only returns the API's internal UTC time. Example response:
+Returns [details](https://api.taskratchet.com/api1/status) about the API server instance that handled the request. Currently only returns the API's internal UTC time. 
+
+Example response:
 
 ```
 {
