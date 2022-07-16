@@ -11,3 +11,7 @@ TaskRatchet's open-source projects can be found here:
 - [taskratchet/taskratchet-docs](https://github.com/TaskRatchet/taskratchet-docs) - This documentation site.
 - [taskratchet/taskratchet-python](https://github.com/TaskRatchet/taskratchet-python) - A TaskRatchet API wrapper written in Python.
 - [taskratchet/taskratchet-web](https://github.com/TaskRatchet/taskratchet-web) - The TaskRatchet web app.
+
+## Financial Contributions
+
+TaskRatchet is [literally committed](https://www.beeminder.com/tskrtcht/oo) to making ongoing financial contributions to open source projects. Currently contributions are made via [Open Collective](https://opencollective.com/taskratchet).
