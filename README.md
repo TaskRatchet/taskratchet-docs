@@ -5,13 +5,13 @@
 ## Index
 
 - [API](api.md)
-- [Contribute](contribute.md)
 - [Feature Suggestions](https://taskratchet.consider.it/)
 - [Frequently Asked Questions](faq.md)
 - [Friends & Competitors](friends.md)
 - [Glossary](glossary.md)
 - [How It Works](works.md)
 - [Integrations](integrations.md)
+- [Open Source](open-source.md)
 - [Other Projects](other-projects.md)
 - [Timezones](timezones.md)
 - [Working with Tasks](working-with-tasks.md)
