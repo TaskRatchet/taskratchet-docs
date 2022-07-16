@@ -12,7 +12,6 @@
 - [How It Works](works.md)
 - [Integrations](integrations.md)
 - [Open Source](open-source.md)
-- [Other Projects](other-projects.md)
 - [Timezones](timezones.md)
 - [Working with Tasks](working-with-tasks.md)
 
