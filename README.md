@@ -5,6 +5,7 @@
 ## Index
 
 - [API](api.md)
+- [Climate](https://climate.stripe.com/JS6ptt)
 - [Feature Suggestions](https://taskratchet.consider.it/)
 - [Frequently Asked Questions](faq.md)
 - [Friends & Competitors](friends.md)
