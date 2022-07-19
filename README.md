@@ -14,6 +14,7 @@
 - [Integrations](integrations.md)
 - [Open Source](open-source.md)
 - [Timezones](timezones.md)
+- [Transparency](transparency.md)
 - [Working with Tasks](working-with-tasks.md)
 
 ## Further Reading
