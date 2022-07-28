@@ -3,6 +3,8 @@
 TaskRatchet isn't the only option around! If you find TaskRatchet interesting, we think you'll
 like these tools, too. Have a tool you think should be included in this list? [Submit a pull request][1].
 
+In addition to the services on this page, Beeminder has been keeping a similar list since 2012 (long before TaskRatchet existed) for their own friends and competitors. You can find theirs here: [Aiding and Abetting][2]
+
 - [Boss as a Service](https://bossasaservice.life/) - "We make sure you achieve your goals. We keep you accountable. You get stuff done."
 - [Complice](https://complice.co/) - "Complice is for making meaningful progress every day."
 
@@ -38,3 +40,4 @@ your to-do list (no matter where you are or what device you use)."
 - [Mindful Internet Use](https://mindfulinternetuse.com/) - A chrome extension that prompts you to breathe and decide how much time you'll spend before visiting a distracting website.
 
 [1]: https://github.com/narthur/taskratchet-docs/edit/master/friends.md
+[2]: https://blog.beeminder.com/competitors/
