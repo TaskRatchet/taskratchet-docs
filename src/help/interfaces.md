@@ -2,15 +2,6 @@
 
 There are several ways to use TaskRatchet. This page describes the different interfaces.
 
-## Table of Contents
-
-- [Interfaces](#interfaces)
-  - [Table of Contents](#table-of-contents)
-  - [Web](#web)
-  - [Smartphone](#smartphone)
-    - [Install](#install)
-  - [Edge Sidebar](#edge-sidebar)
-
 ## Web
 
 The web interface is the primary way to use TaskRatchet. It's available at [app.taskratchet.com](https://app.taskratchet.com).
@@ -27,6 +18,14 @@ To [install](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/I
 - [Firefox for Android](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installing#firefox_for_android)
 - [Samsung Internet Browser](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installing#samsung_internet_browser)
 - [Safari for iOS / iPhoneOS / iPadOS](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installing#safari_for_ios_iphoneos_ipados)
+
+## Telegram Bot
+
+TaskRatchet has a Telegram bot that allows you to manage your tasks and receive reminders directly inside Telegram. To get started:
+
+1. Visit [t.me/taskratchet_bot](https://t.me/taskratchet_bot)
+2. Run the `/start` command
+3. Follow the instructions to connect your TaskRatchet account
 
 ## Edge Sidebar
 
