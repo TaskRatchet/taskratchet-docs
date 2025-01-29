@@ -15,13 +15,11 @@ There are several ways to use TaskRatchet. This page describes the different int
 
 The web interface is the primary way to use TaskRatchet. It's available at [app.taskratchet.com](https://app.taskratchet.com).
 
-## Smartphone
-
-### Progressive Web App
+## Progressive Web App
 
 TaskRatchet is a PWA (Progressive Web App), which means it can be installed on your smartphone. This is the recommended way to use TaskRatchet on your phone.
 
-#### Install
+### Install
 
 To [install](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installing) TaskRatchet on your phone, open the web interface in your phone's browser. Then, follow the instructions for your browser:
 
