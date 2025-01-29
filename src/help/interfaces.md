@@ -30,10 +30,6 @@ To [install](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/I
 - [Samsung Internet Browser](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installing#samsung_internet_browser)
 - [Safari for iOS / iPhoneOS / iPadOS](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installing#safari_for_ios_iphoneos_ipados)
 
-### iOS App
-
-TaskRatchet is also available as an iOS app. You can download it from the [App Store](https://apps.apple.com/us/app/taskratchet/id6477467755). However do be warned that the iOS app is still in beta and may have bugs or missing features. If you encounter any issues, please let us know by emailing us at support@taskratchet.com.
-
 ## Edge Sidebar
 
 TaskRatchet can be installed as a sidebar in Microsoft Edge. This is the recommended way to use TaskRatchet on your desktop. Please watch [this video](https://youtu.be/DTguvagXPLM) for instructions:
