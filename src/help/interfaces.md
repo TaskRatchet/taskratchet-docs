@@ -21,6 +21,10 @@ To [install](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/I
 
 ## Telegram Bot
 
+::: warning
+The Telegram bot is in alpha and may be unstable.
+:::
+
 TaskRatchet has a Telegram bot that allows you to manage your tasks and receive reminders directly inside Telegram. To get started:
 
 1. Visit [t.me/taskratchet_bot](https://t.me/taskratchet_bot)
