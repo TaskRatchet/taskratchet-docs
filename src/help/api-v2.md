@@ -6,6 +6,11 @@ API and its associated documentation are likely to be incomplete and/or incorrec
 and may change without notice.
 :::
 
+## Authentication
+
+Please reach out to support@taskratchet.com to get an API key and instructions on 
+how to provide it in your request headers.
+
 ## Schema
 
 Base URL: <https://api.taskratchet.com/api2/>
