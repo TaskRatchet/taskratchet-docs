@@ -13,7 +13,7 @@ When adding a task, TaskRatchet asks you for three pieces of information:
 In addition, you can create multiple tasks at the same time—all with the same deadline and stakes—by entering one task per line
 in the task field. Each line will be created as its own task.
 
-![FVYKEaUXsAIdwTd](https://user-images.githubusercontent.com/4655422/179230689-1a697e39-5cef-49ad-b854-aa1b463b2516.jpeg)
+![Task Creation Example](https://user-images.githubusercontent.com/4655422/179230689-1a697e39-5cef-49ad-b854-aa1b463b2516.jpeg)
 
 ## Get Reminded
 

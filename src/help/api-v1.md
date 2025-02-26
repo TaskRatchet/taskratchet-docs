@@ -11,13 +11,13 @@ anything in this document that seems inaccurate, please send an email to <suppor
 
 You can find your API user ID and token in your account settings.
 
-## Tooling
+## Getting Started
 
-- <https://github.com/narthur/taskratchet-python>
+Before making any API requests, you'll need to:
 
-## Examples
-
-- <https://forum.beeminder.com/t/taskratchet-bookmarklets/10276>
+1. Log into your TaskRatchet account
+2. Go to Account Settings
+3. Find your API User ID and API Token
 
 ## Authentication
 
@@ -27,6 +27,14 @@ The API uses two custom headers for authentication.
 | ---------------------- | ----------------------------------------------- |
 | `X-Taskratchet-Userid` | Your account ID, found in your account settings |
 | `X-Taskratchet-Token`  | Your API token, found in your account settings  |
+
+Example request with authentication headers:
+
+```bash
+curl -X GET "https://api.taskratchet.com/api1/me" \
+  -H "X-Taskratchet-Userid: YOUR_USER_ID" \
+  -H "X-Taskratchet-Token: YOUR_API_TOKEN"
+```
 
 ## Schema
 
@@ -84,6 +92,19 @@ Example response:
 
 Response is the updated user object—see `GET me`.
 
+Example request:
+
+```bash
+curl -X PUT "https://api.taskratchet.com/api1/me" \
+  -H "X-Taskratchet-Userid: YOUR_USER_ID" \
+  -H "X-Taskratchet-Token: YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Jon Doe",
+    "timezone": "America/Los_Angeles"
+  }'
+```
+
 ### `GET me/tasks`
 
 Returns an array of tasks. Currently it returns all tasks ever associated with the user.
@@ -126,6 +147,20 @@ Example response:
 
 On success, returns the created task.
 
+Example request:
+
+```bash
+curl -X POST "https://api.taskratchet.com/api1/me/tasks" \
+  -H "X-Taskratchet-Userid: YOUR_USER_ID" \
+  -H "X-Taskratchet-Token: YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "task": "Take out the trash",
+    "due": "3/25/2023, 11:59 PM",
+    "cents": 500
+  }'
+```
+
 Example response:
 
 ```json
@@ -145,7 +180,7 @@ Example response:
 
 Retrieve a single task with `task_id`. See `GET me/tasks` for more detail on the returned task object.
 
-Example respone:
+Example response:
 
 ```json
 {
@@ -158,6 +193,27 @@ Example respone:
   "status": "pending",
   "timezone": "America/Cancun"
 }
+```
+
+### `PUT me/tasks/{task_id}`
+
+Update a specific task.
+
+| Input Field | Type    | Description                                                                 |
+| ----------- | ------- | --------------------------------------------------------------------------- |
+| complete    | boolean | Mark the task as completed. Currently the only supported field to update. |
+| uncle       | boolean | Request the task be charged as incomplete immediately. Currently not supported. |
+
+Example request:
+
+```bash
+curl -X PUT "https://api.taskratchet.com/api1/me/tasks/tdDPzh1GpZHAGZURVBf6" \
+  -H "X-Taskratchet-Userid: YOUR_USER_ID" \
+  -H "X-Taskratchet-Token: YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "complete": true
+  }'
 ```
 
 ### `GET status`
@@ -175,3 +231,8 @@ Example response:
 ### `GET timezones`
 
 Returns an array of [valid timezone values](https://api.taskratchet.com/api1/timezones).
+
+## Tooling & Resources
+
+- [TaskRatchet Python Client](https://github.com/narthur/taskratchet-python) - Official Python client library
+- [TaskRatchet Bookmarklets](https://forum.beeminder.com/t/taskratchet-bookmarklets/10276) - Browser bookmarklets for common operations
