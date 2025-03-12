@@ -4,15 +4,15 @@ Welcome to the official TaskRatchet documentation. TaskRatchet is a todo list th
 
 ## Quick Start
 
-- [How It Works](./help/works.md) - Learn the basics
-- [Working with Tasks](./help/working-with-tasks.md) - Create and manage tasks
-- [FAQ](./help/faq.md) - Common questions answered
+- [How It Works](./works.md) - Learn the basics
+- [Working with Tasks](./working-with-tasks.md) - Create and manage tasks
+- [FAQ](./faq.md) - Common questions answered
 
 ## Documentation
 
-- [API](./help/api-v1.md) - Integrate with TaskRatchet
-- [Integrations](./help/integrations.md) - Connect with other services
-- [Glossary](./help/glossary.md) - Key terminology explained
+- [API](./api-v1.md) - Integrate with TaskRatchet
+- [Integrations](./integrations.md) - Connect with other services
+- [Glossary](./glossary.md) - Key terminology explained
 
 ## Support
 

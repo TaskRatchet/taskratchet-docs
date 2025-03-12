@@ -16,7 +16,6 @@
 
 ## Project Structure
 - `/src` - Main content directory
-  - `/help` - Documentation and help articles
   - `/public` - Static assets
 - `/.vitepress` - VitePress configuration and theme customization
 

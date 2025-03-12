@@ -1,7 +1,7 @@
 # API v1
 
 ::: info
-This version of the API is stable. Future features will be added to [version 2](/help/api-v2).
+This version of the API is stable. Future features will be added to [version 2](/api-v2).
 :::
 
 TaskRatchet has an API you can use to list, update, and create new tasks, among other things.

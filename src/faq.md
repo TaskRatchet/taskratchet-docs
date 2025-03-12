@@ -9,7 +9,7 @@ TaskRatchet is a todo list where you stake money on completing tasks by deadline
 ### How is TaskRatchet different from Beeminder?
 
 First, [TaskRatchet and Beeminder go great together](https://www.beeminder.com/taskratchet), so definitely check out
-[our Beeminder integration](https://taskratchet.com/help/integrations.html#beeminder).
+[our Beeminder integration](https://taskratchet.com/integrations.html#beeminder).
 
 [Beeminder](https://www.beeminder.com/home) and TaskRatchet are quite similar—they are both tools for committing yourself
 to future behaviors by putting money on the line. However they differ in several ways:
