@@ -9,9 +9,9 @@ export default defineConfig({
     logo: "/logo.png",
     nav: [
       { text: "Home", link: "/" },
-      { text: "How It Works", link: "/help/works" },
-      { text: "FAQ", link: "/help/faq" },
-      { text: "API", link: "/help/api-v1" },
+      { text: "How It Works", link: "/works" },
+      { text: "FAQ", link: "/faq" },
+      { text: "API", link: "/api-v1" },
       { text: "Log In", link: "https://app.taskratchet.com/" },
     ],
     search: {
@@ -22,20 +22,20 @@ export default defineConfig({
         {
           text: "Getting Started",
           items: [
-            { text: "How It Works", link: "/help/works" },
-            { text: "Working with Tasks", link: "/help/working-with-tasks" },
-            { text: "Frequently Asked Questions", link: "/help/faq" },
+            { text: "How It Works", link: "/works" },
+            { text: "Working with Tasks", link: "/working-with-tasks" },
+            { text: "Frequently Asked Questions", link: "/faq" },
           ],
         },
         {
           text: "Documentation",
           items: [
-            { text: "API v1 (Stable)", link: "/help/api-v1" },
-            { text: "API v2 (Beta)", link: "/help/api-v2" },
-            { text: "Glossary", link: "/help/glossary" },
-            { text: "Integrations", link: "/help/integrations" },
-            { text: "Interfaces", link: "/help/interfaces" },
-            { text: "Timezones", link: "/help/timezones" },
+            { text: "API v1 (Stable)", link: "/api-v1" },
+            { text: "API v2 (Beta)", link: "/api-v2" },
+            { text: "Glossary", link: "/glossary" },
+            { text: "Integrations", link: "/integrations" },
+            { text: "Interfaces", link: "/interfaces" },
+            { text: "Timezones", link: "/timezones" },
           ],
         },
         {
@@ -46,9 +46,9 @@ export default defineConfig({
               text: "Feature Suggestions",
               link: "https://taskratchet.consider.it/",
             },
-            { text: "Friends & Competitors", link: "/help/friends" },
-            { text: "Open Source", link: "/help/open-source" },
-            { text: "Transparency", link: "/help/transparency" },
+            { text: "Friends & Competitors", link: "/friends" },
+            { text: "Open Source", link: "/open-source" },
+            { text: "Transparency", link: "/transparency" },
             { text: "Privacy", link: "/privacy" },
             { text: "Terms", link: "/terms" },
           ],
@@ -61,8 +61,8 @@ export default defineConfig({
         "Built with ❤️ by <a href='https://ko-fi.com/narthur'>Narthur</a> and <a href='https://pinepeakdigital.com/'>Pine Peak Digital</a>.",
     },
     socialLinks: [
-      { icon: 'twitter', link: 'https://twitter.com/TaskRatchet' },
-      { icon: 'github', link: 'https://github.com/TaskRatchet' }
+      { icon: "twitter", link: "https://twitter.com/TaskRatchet" },
+      { icon: "github", link: "https://github.com/TaskRatchet" },
     ],
   },
 });
