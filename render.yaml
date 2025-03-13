@@ -10,3 +10,10 @@ services:
     envVars:
       - key: SKIP_INSTALL_DEPS
         value: "true"
+    routes:
+      - type: redirect
+        source: /help.html
+        destination: /
+      - type: redirect
+        source: /help/*
+        destination: /*
