@@ -1,0 +1,10 @@
+name: CI
+on:
+  push:
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: asdf-vm/actions/install@v3
+      - uses: UmbrellaDocs/action-linkspector@v1
