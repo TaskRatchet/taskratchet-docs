@@ -13,7 +13,7 @@ You can find your API user ID and token in your account settings.
 
 ## Getting Started
 
-Before making any API requests, you'll need to:
+Before making any requests, you'll need to:
 
 1. Log into your TaskRatchet account
 2. Go to Account Settings
@@ -28,13 +28,37 @@ The API uses two custom headers for authentication.
 | `X-Taskratchet-Userid` | Your account ID, found in your account settings |
 | `X-Taskratchet-Token`  | Your API token, found in your account settings  |
 
-Example request with authentication headers:
+::: code-group
+```python [Python]
+import requests
 
-```bash
+headers = {
+    'X-Taskratchet-Userid': 'YOUR_USER_ID',
+    'X-Taskratchet-Token': 'YOUR_API_TOKEN'
+}
+
+response = requests.get('https://api.taskratchet.com/api1/me', headers=headers)
+print(response.json())
+```
+
+```javascript [JavaScript]
+const response = await fetch('https://api.taskratchet.com/api1/me', {
+  headers: {
+    'X-Taskratchet-Userid': 'YOUR_USER_ID',
+    'X-Taskratchet-Token': 'YOUR_API_TOKEN'
+  }
+});
+
+const data = await response.json();
+console.log(data);
+```
+
+```curl [cURL]
 curl -X GET "https://api.taskratchet.com/api1/me" \
   -H "X-Taskratchet-Userid: YOUR_USER_ID" \
   -H "X-Taskratchet-Token: YOUR_API_TOKEN"
 ```
+:::
 
 ## Schema
 
