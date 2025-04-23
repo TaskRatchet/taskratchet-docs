@@ -2,7 +2,7 @@ name: CI
 on:
   pull_request:
     branches:
-      - main
+      - master
 jobs:
   check-links:
     runs-on: ubuntu-latest
