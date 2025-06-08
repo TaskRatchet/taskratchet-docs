@@ -19,18 +19,6 @@ To [install](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/I
 - [Samsung Internet Browser](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installing#samsung_internet_browser)
 - [Safari for iOS / iPhoneOS / iPadOS](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installing#safari_for_ios_iphoneos_ipados)
 
-## Telegram Bot
-
-::: warning
-The Telegram bot is in alpha and may be unstable.
-:::
-
-TaskRatchet has a Telegram bot that allows you to manage your tasks and receive reminders directly inside Telegram. To get started:
-
-1. Visit [t.me/taskratchet_bot](https://t.me/taskratchet_bot)
-2. Run the `/start` command
-3. Follow the instructions to connect your TaskRatchet account
-
 ## Edge Sidebar
 
 TaskRatchet can be installed as a sidebar in Microsoft Edge. This is the recommended way to use TaskRatchet on your desktop. Please watch [this video](https://youtu.be/DTguvagXPLM) for instructions:
