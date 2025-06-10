@@ -8,8 +8,16 @@ and may change without notice.
 
 ## Authentication
 
-Please reach out to support@taskratchet.com to get an API key and instructions on 
-how to provide it in your request headers.
+To use the TaskRatchet API, you need an API key. This key is used to authenticate your requests and is required for all endpoints.
+
+Example request with API key:
+
+```bash
+curl "https://api.taskratchet.com/api2/me" \
+  -H "Authorization: ApiKey-v2 YOUR_API_V2_TOKEN"
+```
+
+Please reach out to support@taskratchet.com to get an API key.
 
 ## Schema
 
@@ -67,6 +75,13 @@ Returns an array of tasks. This route is paginated.
 | cents          | number  | The task's stakes in cents                     |
 | complete       | boolean | Whether the task is complete                   |
 | status         | string  | The task's status (pending, complete, expired) |
+
+Example request:
+
+```bash
+curl "https://api.taskratchet.com/api2/me/tasks?page=0" \
+  -H "Authorization: ApiKey-v2 YOUR_API_V2_TOKEN"
+```
 
 Example response:
 
