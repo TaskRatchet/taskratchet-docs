@@ -60,6 +60,13 @@ curl -X GET "https://api.taskratchet.com/api1/me" \
 ```
 :::
 
+## Rate Limiting
+
+| Route | Period | Limit |
+| ------------------------ | ------- | ----- |
+| `/api1/*` | 15 minutes | 100 requests |
+| `/api1/me/tasks` | 15 minutes | 10 requests |
+
 ## Schema
 
 Base URL: <https://api.taskratchet.com/api1/>

@@ -19,6 +19,12 @@ curl "https://api.taskratchet.com/api2/me" \
 
 Please reach out to support@taskratchet.com to get an API key.
 
+## Rate Limiting
+
+| Route | Period | Limit |
+| ------------------------ | ------- | ----- |
+| `/api2/*` | 15 minutes | 100 requests |
+
 ## Schema
 
 Base URL: <https://api.taskratchet.com/api2/>
