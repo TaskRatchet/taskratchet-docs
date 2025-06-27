@@ -1,468 +1,144 @@
-<script setup>
-import { reactive, ref } from 'vue'
-
-// Form data
-const form = reactive({
-  lastName: '',
-  email: '',
-  subject: '',
-  captcha: ''
-})
-
-const errors = ref({})
-const formRef = ref(null)
-
-// Based on original zsValidateMandatoryFields
-function validate() {
-  const mandatoryFields = [
-    { key: 'lastName', name: 'Last Name' },
-    { key: 'email', name: 'Email' },
-    { key: 'subject', name: 'Subject' }
-  ]
-
-  // Clear previous errors
-  errors.value = {}
-
-  // Check mandatory fields
-  for (const field of mandatoryFields) {
-    const value = form[field.key]?.replace(/^\s+|\s+$/g, '') || ''
-
-    if (value.length === 0) {
-      alert(`${field.name} cannot be empty`)
-      errors.value[field.key] = `${field.name} cannot be empty`
-      return false
-    }
-
-    // Email validation
-    if (field.key === 'email') {
-      const emailRegex = /^([\w_][\w\-_.+'&]*)@(?=.{4,256}$)(([\w]+)([\-_]*[\w])*[\.])+[a-zA-Z]{2,22}$/
-      if (!value.match(emailRegex)) {
-        alert('Enter a valid email-Id')
-        errors.value[field.key] = 'Enter a valid email-Id'
-        return false
-      }
-    }
-  }
-
-  // Check captcha
-  const captchaValue = form.captcha?.replace(/^\s+|\s+$/g, '') || ''
-  if (captchaValue.length === 0) {
-    alert('Please enter the captcha code.')
-    errors.value.captcha = 'Please enter the captcha code.'
-    return false
-  }
-
-  return true
-}
-
-// AJAX call copied from zsRegenerateCaptcha
-async function refreshCaptcha() {
-  try {
-    const response = await fetch(`https://desk.zoho.com/support/GenerateCaptcha?action=getNewCaptcha&_=${new Date().getTime()}`)
-    const data = await response.json()
-
-    // Update captcha image and digest
-    const captchaImg = document.getElementById('zsCaptchaUrl')
-    const captchaDigest = document.getElementsByName('xJdfEaS')[0]
-
-    if (captchaImg && data.captchaUrl) {
-      captchaImg.src = data.captchaUrl
-    }
-
-    if (captchaDigest && data.captchaDigest) {
-      captchaDigest.value = data.captchaDigest
-    }
-
-    // Show captcha div and hide loading
-    const loadingDiv = document.getElementById('zsCaptchaLoading')
-    const captchaDiv = document.getElementById('zsCaptcha')
-
-    if (loadingDiv) loadingDiv.style.display = 'none'
-    if (captchaDiv) captchaDiv.style.display = 'block'
-
-  } catch (error) {
-    console.error('Error refreshing captcha:', error)
-  }
-}
-
-// Native form submission - using Vue ref
-function nativeSubmit() {
-  const submitButton = document.getElementById('zsSubmitButton_1148939000000379137')
-
-  if (submitButton) {
-    submitButton.setAttribute('disabled', 'disabled')
-  }
-
-  // Use Vue ref to get form element and submit natively for Zoho
-  if (formRef.value) {
-    formRef.value.submit()
-  }
-}
-
-function handleSubmit() {
-  if (validate()) {
-    nativeSubmit()
-  }
-}
-
-function handleReset() {
-  Object.assign(form, {
-    lastName: '',
-    email: '',
-    subject: '',
-    captcha: ''
-  })
-
-  // Clear errors
-  errors.value = {}
-
-  // Refresh captcha
-  refreshCaptcha()
-
-  // Re-enable submit button
-  const submitButton = document.getElementById('zsSubmitButton_1148939000000379137')
-  if (submitButton) {
-    submitButton.removeAttribute('disabled')
-  }
-}
-
-// Initialize captcha on component mount
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  refreshCaptcha()
-})
-</script>
-
 <template>
-  <div id='zohoSupportWebToCase' align='center'>
-    <form
-      ref="formRef"
-      name='zsWebToCase_1148939000000379137'
-      id='zsWebToCase_1148939000000379137'
-      action='https://desk.zoho.com/support/WebToCase'
-      method='POST'
-      @submit.prevent="handleSubmit"
-      @reset.prevent="handleReset"
-      enctype='multipart/form-data'
-    >
-      <!-- Hidden Zoho fields - preserved exactly as they appear -->
-      <input type='hidden' name='xnQsjsdp' value='edbsnfeb76ea8da9d021fe11006adbc11fa5d' />
-      <input type='hidden' name='xmIwtLD' value='edbsn7fc94d202a50ce62921faaea62ba87fb350e2ce7d0c41d3b2be00b28efd48882' />
-      <input type='hidden' name='xJdfEaS' value='' />
-      <input type='hidden' name='actionType' value='Q2FzZXM=' />
-      <input type="hidden" id="property(module)" value="Cases" />
-      <input type="hidden" id="dependent_field_values_Cases" value="&#x7b;&#quot;JSON_VALUES&#quot;&#x3a;&#x7b;&#x7d;,&#quot;JSON_SELECT_VALUES&#quot;&#x3a;&#x7b;&#x7d;,&#quot;JSON_MAP_DEP_LABELS&#quot;&#x3a;&#x5b;&#x5d;&#x7d;" />
-      <input type='hidden' name='returnURL' value='https&#x3a;&#x2f;&#x2f;docs.taskratchet.com&#x2f;' />
+    <section class="contact-section">
+        <div class="contact-intro">
+            <h2 class="contact-title">Get in Touch</h2>
+            <p class="contact-description">
+                Fill out the form below and we'll get back to you as soon as
+                possible.
+            </p>
+        </div>
 
-      <table border='0' cellspacing='0' class='zsFormClass'>
-        <tr>
-          <td nowrap class='zsFontClass ' width='25%' align='left'>Last Name&nbsp;&nbsp;</td>
-          <td align='left' width='75%'>
+        <form
+            class="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+        >
             <input
-              type='text'
-              maxlength='120'
-              name='Contact Name'
-              class='manfieldbdr'
-              v-model="form.lastName"
+                type="hidden"
+                name="access_key"
+                value="b564b69f-d1d1-4cf0-a79a-4eba504e7f72"
             />
-          </td>
-        </tr>
-        <tr>
-          <td nowrap class='zsFontClass ' width='25%' align='left'>Email&nbsp;&nbsp;</td>
-          <td align='left' width='75%'>
             <input
-              type='text'
-              maxlength='120'
-              name='Email'
-              class='manfieldbdr'
-              v-model="form.email"
+                type="hidden"
+                name="subject"
+                value="New Contact Form Submission from Web3Forms"
             />
-          </td>
-        </tr>
-        <tr>
-          <td nowrap class='zsFontClass ' width='25%' align='left'>Subject&nbsp;&nbsp;</td>
-          <td align='left' width='75%'>
-            <input
-              type='text'
-              maxlength='255'
-              name='Subject'
-              class='manfieldbdr'
-              v-model="form.subject"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td nowrap class='zsFontClass' width='25%' align='left'>Captcha&nbsp;</td>
-          <td>
-            <div id='zsCaptchaLoading'>
-              <strong>Loading... <br>
-                <br>
-              </strong>
+            <input type="hidden" name="from_name" value="My Website" />
+            <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
+
+            <div class="form-group-container">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        class="form-input"
+                        placeholder="Your name"
+                        type="text"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="Your email"
+                        type="email"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                        class="form-textarea"
+                        id="message"
+                        name="message"
+                        placeholder="Your message"
+                    ></textarea>
+                </div>
             </div>
-            <div id='zsCaptcha' style='display:none;'>
-              <img src='#' id='zsCaptchaUrl' name="zsCaptchaImage">
-              <a href='javascript:;' style='color:#00a3fe; cursor:pointer; margin-left:10px; vertical-align:middle;text-decoration: none;' class='zsFontClass' @click='refreshCaptcha()'>Refresh</a>
-            </div>
-            <div>
-              <input
-                type='text'
-                name='zsWebFormCaptchaWord'
-                v-model="form.captcha"
-              />
-              <input type='hidden' name='zsCaptchaSrc' value='' />
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td style='padding: 11px 5px 0px 5px;' colspan='2' align='center' width='25%'>
-            <input type='submit' id="zsSubmitButton_1148939000000379137" class='zsFontClass' value='Submit'> &nbsp; &nbsp;
-            <input type='button' class='zsFontClass' value='Reset' @click="handleReset">
-          </td>
-        </tr>
-        <tr>
-          <td width='25%' align='left'></td>
-          <td style='padding: 0px 5px;' align='left' width='75%'>
-            <div class='wb_FtCon wb_common'>
-              <span>powered by </span>
-              <a target='_blank' rel='noopener noreferrer' href='https://zoho.com/desk' class='wb_logoCon'>
-                <img class='wb_logo' src='https://d1ydxa2xvtn0b5.cloudfront.net/app/images/portalLogo.de847024ebc0131731a3.png' />
-              </a>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </form>
-  </div>
+            <button class="form-submit" type="submit">Send Message</button>
+        </form>
+    </section>
 </template>
 
 <style scoped>
-/* Zoho form styles */
-#zohoSupportWebToCase textarea,
-#zohoSupportWebToCase input[type='text'],
-#zohoSupportWebToCase input[type='date'],
-#zohoSupportWebToCase select,
-.wb_common {
-    width: 280px;
-}
-
-#zohoSupportWebToCase td {
-    padding: 11px 5px;
-}
-
-#zohoSupportWebToCase textarea,
-#zohoSupportWebToCase input[type='text'],
-#zohoSupportWebToCase input[type='date'],
-#zohoSupportWebToCase select {
-    border: 1px solid #ddd;
-    padding: 3px 5px;
-    border-radius: 3px;
-    background-color: var(--vp-c-bg);
-    color: var(--vp-c-text-1);
-}
-
-/* Dark mode support */
-.dark #zohoSupportWebToCase textarea,
-.dark #zohoSupportWebToCase input[type='text'],
-.dark #zohoSupportWebToCase input[type='date'],
-.dark #zohoSupportWebToCase select {
-    border: 1px solid var(--vp-c-border);
-    background-color: var(--vp-c-bg-alt);
-    color: var(--vp-c-text-1);
-}
-
-#zohoSupportWebToCase select {
-    box-sizing: unset
-}
-
-#zohoSupportWebToCase .wb_selectDate {
-    width: auto
-}
-
-#zohoSupportWebToCase input.wb_cusInput {
-    width: 108px
-}
-
-.wb_FtCon {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 15px;
-    padding-left: 10px
-}
-
-.wb_logoCon {
-    display: flex;
-    margin-left: 5px
-}
-
-.wb_logo {
-    max-width: 16px;
-    max-height: 16px;
-}
-
-#zohoSupportWebToCase .wb_multi_pick {
-    border: 1px solid #ddd;
-    padding: 3px 5px;
-    border-radius: 3px;
-    width: 280px;
-    height: 95px;
-    overflow-y: auto;
-}
-
-#zohoSupportWebToCase .wb_multi_pick_label {
-    display: block;
-}
-
-#zohoSupportWebToCase .wb_multi_pick_input,
-.wb_multi_pick_input_all {
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.zsFontClass {
-    color: var(--vp-c-text-1);
-    font-family: Arial;
-    font-size: 13px
-}
-
-/* Dark mode table styles */
-.dark .zsFontClass {
-    color: var(--vp-c-text-1);
-}
-
-/* Dark mode link styles */
-.dark #zohoSupportWebToCase a {
-    color: var(--vp-c-brand-1);
-}
-
-/* Dark mode button styles */
-.dark #zohoSupportWebToCase input[type='submit'],
-.dark #zohoSupportWebToCase input[type='button'] {
-    background-color: var(--vp-c-bg-alt);
-    color: var(--vp-c-text-1);
-    border: 1px solid var(--vp-c-border);
-    border-radius: 4px;
-    padding: 6px 12px;
-}
-
-.dark #zohoSupportWebToCase input[type='submit']:hover,
-.dark #zohoSupportWebToCase input[type='button']:hover {
-    background-color: var(--vp-c-brand-1);
-    color: var(--vp-c-white);
-}
-
-.manfieldbdr {
-    border-left: 1px solid #ff6448 !important
-}
-
-.hleft {
-    text-align: left;
-}
-
-input[type=file]::-webkit-file-upload-button {
-    cursor: pointer;
-}
-
-.wtcsepcode {
-    margin: 0px 15px;
-    color: #aaa;
-    float: left;
-}
-
-.wtccloudattach {
-    float: left;
-    color: #00a3fe !important;
-    cursor: pointer;
-    text-decoration: none !important;
-}
-
-.wtccloudattach:hover {
-    text-decoration: none !important;
-}
-
-.wtcuploadinput {
-    cursor: pointer;
-    float: left;
-    width: 62px;
-    margin-top: -20px;
-    opacity: 0;
-    clear: both;
-}
-
-.wtcuploadfile {
-    float: left;
-    color: #00a3fe;
-}
-
-.filenamecls {
-    margin-right: 15px;
-    float: left;
-    margin-top: 5px;
-}
-
-.clboth {
-    clear: both;
-}
-
-#zsFileBrowseAttachments {
-    clear: both;
-    margin: 5px 0px 10px;
-}
-
-.zsFontClass {
-    vertical-align: top;
-}
-
-#tooltip-zc {
-    font: normal 12px Arial, Helvetica, sans-serif;
-    line-height: 18px;
-    position: absolute;
-    padding: 8px;
-    margin: 20px 0 0;
-    background: #fff;
-    border: 1px solid #528dd1;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    color: #eee;
-    -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-    z-index: 10000;
-    color: #777
-}
-
-.wtcmanfield {
-    color: #f00;
-    font-size: 16px;
-    position: relative;
-    top: 2px;
-    left: 1px;
-}
-
-#zsCloudAttachmentIframe {
+.contact-section {
     width: 100%;
-    height: 100%;
-    z-index: 99999 !important;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    border-style: none;
-    display: none;
-    background-color: #fff;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 1rem;
 }
 
-.wtchelpinfo {
-    background-position: -246px -485px;
-    width: 15px;
-    height: 15px;
-    display: inline-block;
-    position: relative;
-    top: 2px;
-    background-image: url(https://d1ydxa2xvtn0b5.cloudfront.net/app/images/zs-mpro.b6c9cf2347c62390fdcb.png);
+.contact-intro > * + * {
+    margin-top: 1rem;
 }
 
-.zsMaxSizeMessage {
-    font-size: 13px;
+.contact-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+
+.contact-description {
+    color: rgb(107 114 128);
+}
+
+.form-group-container {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+    padding: 0.5rem;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background-color: transparent;
+}
+
+.form-input::placeholder,
+.form-textarea:focus-visible {
+    color: rgb(60, 60, 67);
+}
+
+.dark .form-input::placeholder,
+.dark .form-textarea:focus-visible {
+    color: rgba(255, 255, 245, 0.86);
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.form-textarea {
+    min-height: 120px;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 1.2rem;
+    background-color: #3124ca;
+    color: #fff;
+    padding: 13px 5px;
+    border-radius: 0.375rem;
 }
 </style>
