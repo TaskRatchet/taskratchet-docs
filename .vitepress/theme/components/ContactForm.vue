@@ -2,14 +2,15 @@
 import { reactive, ref } from 'vue'
 
 // Form data
-const form = reactive({ 
-  lastName: '', 
-  email: '', 
-  subject: '', 
-  captcha: '' 
+const form = reactive({
+  lastName: '',
+  email: '',
+  subject: '',
+  captcha: ''
 })
 
 const errors = ref({})
+const formRef = ref(null)
 
 // Based on original zsValidateMandatoryFields
 function validate() {
@@ -18,20 +19,20 @@ function validate() {
     { key: 'email', name: 'Email' },
     { key: 'subject', name: 'Subject' }
   ]
-  
+
   // Clear previous errors
   errors.value = {}
-  
+
   // Check mandatory fields
   for (const field of mandatoryFields) {
     const value = form[field.key]?.replace(/^\s+|\s+$/g, '') || ''
-    
+
     if (value.length === 0) {
       alert(`${field.name} cannot be empty`)
       errors.value[field.key] = `${field.name} cannot be empty`
       return false
     }
-    
+
     // Email validation
     if (field.key === 'email') {
       const emailRegex = /^([\w_][\w\-_.+'&]*)@(?=.{4,256}$)(([\w]+)([\-_]*[\w])*[\.])+[a-zA-Z]{2,22}$/
@@ -42,7 +43,7 @@ function validate() {
       }
     }
   }
-  
+
   // Check captcha
   const captchaValue = form.captcha?.replace(/^\s+|\s+$/g, '') || ''
   if (captchaValue.length === 0) {
@@ -50,7 +51,7 @@ function validate() {
     errors.value.captcha = 'Please enter the captcha code.'
     return false
   }
-  
+
   return true
 }
 
@@ -59,65 +60,65 @@ async function refreshCaptcha() {
   try {
     const response = await fetch(`https://desk.zoho.com/support/GenerateCaptcha?action=getNewCaptcha&_=${new Date().getTime()}`)
     const data = await response.json()
-    
+
     // Update captcha image and digest
     const captchaImg = document.getElementById('zsCaptchaUrl')
     const captchaDigest = document.getElementsByName('xJdfEaS')[0]
-    
+
     if (captchaImg && data.captchaUrl) {
       captchaImg.src = data.captchaUrl
     }
-    
+
     if (captchaDigest && data.captchaDigest) {
       captchaDigest.value = data.captchaDigest
     }
-    
+
     // Show captcha div and hide loading
     const loadingDiv = document.getElementById('zsCaptchaLoading')
     const captchaDiv = document.getElementById('zsCaptcha')
-    
+
     if (loadingDiv) loadingDiv.style.display = 'none'
     if (captchaDiv) captchaDiv.style.display = 'block'
-    
+
   } catch (error) {
     console.error('Error refreshing captcha:', error)
   }
 }
 
-// Native form submission
+// Native form submission - using Vue ref
 function nativeSubmit() {
-  const formElement = document.getElementById('zsWebToCase_1148939000000379137')
   const submitButton = document.getElementById('zsSubmitButton_1148939000000379137')
-  
+
   if (submitButton) {
     submitButton.setAttribute('disabled', 'disabled')
   }
-  
-  if (formElement) {
-    formElement.submit()
+
+  // Use Vue ref to get form element and submit natively for Zoho
+  if (formRef.value) {
+    formRef.value.submit()
   }
 }
 
-function handleSubmit() { 
+function handleSubmit() {
   if (validate()) {
     nativeSubmit()
   }
 }
 
-function handleReset() { 
+function handleReset() {
   Object.assign(form, {
     lastName: '',
     email: '',
     subject: '',
     captcha: ''
   })
-  
+
   // Clear errors
   errors.value = {}
-  
+
   // Refresh captcha
   refreshCaptcha()
-  
+
   // Re-enable submit button
   const submitButton = document.getElementById('zsSubmitButton_1148939000000379137')
   if (submitButton) {
@@ -135,11 +136,12 @@ onMounted(() => {
 
 <template>
   <div id='zohoSupportWebToCase' align='center'>
-    <form 
-      name='zsWebToCase_1148939000000379137' 
-      id='zsWebToCase_1148939000000379137' 
-      action='https://desk.zoho.com/support/WebToCase' 
-      method='POST' 
+    <form
+      ref="formRef"
+      name='zsWebToCase_1148939000000379137'
+      id='zsWebToCase_1148939000000379137'
+      action='https://desk.zoho.com/support/WebToCase'
+      method='POST'
       @submit.prevent="handleSubmit"
       @reset.prevent="handleReset"
       enctype='multipart/form-data'
@@ -152,7 +154,7 @@ onMounted(() => {
       <input type="hidden" id="property(module)" value="Cases" />
       <input type="hidden" id="dependent_field_values_Cases" value="&#x7b;&#quot;JSON_VALUES&#quot;&#x3a;&#x7b;&#x7d;,&#quot;JSON_SELECT_VALUES&#quot;&#x3a;&#x7b;&#x7d;,&#quot;JSON_MAP_DEP_LABELS&#quot;&#x3a;&#x5b;&#x5d;&#x7d;" />
       <input type='hidden' name='returnURL' value='https&#x3a;&#x2f;&#x2f;docs.taskratchet.com&#x2f;' />
-      
+
       <table border='0' cellspacing='0' class='zsFormClass'>
         <tr>
           <td colspan='2' class='zsFontClass'>
@@ -163,10 +165,10 @@ onMounted(() => {
         <tr>
           <td nowrap class='zsFontClass ' width='25%' align='left'>Last Name&nbsp;&nbsp;</td>
           <td align='left' width='75%'>
-            <input 
-              type='text' 
-              maxlength='120' 
-              name='Contact Name' 
+            <input
+              type='text'
+              maxlength='120'
+              name='Contact Name'
               class='manfieldbdr'
               v-model="form.lastName"
             />
@@ -175,10 +177,10 @@ onMounted(() => {
         <tr>
           <td nowrap class='zsFontClass ' width='25%' align='left'>Email&nbsp;&nbsp;</td>
           <td align='left' width='75%'>
-            <input 
-              type='text' 
-              maxlength='120' 
-              name='Email' 
+            <input
+              type='text'
+              maxlength='120'
+              name='Email'
               class='manfieldbdr'
               v-model="form.email"
             />
@@ -187,10 +189,10 @@ onMounted(() => {
         <tr>
           <td nowrap class='zsFontClass ' width='25%' align='left'>Subject&nbsp;&nbsp;</td>
           <td align='left' width='75%'>
-            <input 
-              type='text' 
-              maxlength='255' 
-              name='Subject' 
+            <input
+              type='text'
+              maxlength='255'
+              name='Subject'
               class='manfieldbdr'
               v-model="form.subject"
             />
@@ -209,17 +211,18 @@ onMounted(() => {
               <a href='javascript:;' style='color:#00a3fe; cursor:pointer; margin-left:10px; vertical-align:middle;text-decoration: none;' class='zsFontClass' @click='refreshCaptcha()'>Refresh</a>
             </div>
             <div>
-              <input 
-                type='text' 
+              <input
+                type='text'
                 name='zsWebFormCaptchaWord'
                 v-model="form.captcha"
               />
               <input type='hidden' name='zsCaptchaSrc' value='' />
             </div>
           </td>
+        </tr>
         <tr>
           <td style='padding: 11px 5px 0px 5px;' colspan='2' align='center' width='25%'>
-            <input type='submit' id="zsSubmitButton_1148939000000379137" class='zsFontClass' value='Submit'> &nbsp; &nbsp; 
+            <input type='submit' id="zsSubmitButton_1148939000000379137" class='zsFontClass' value='Submit'> &nbsp; &nbsp;
             <input type='button' class='zsFontClass' value='Reset' @click="handleReset">
           </td>
         </tr>
