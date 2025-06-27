@@ -1,3 +1,7 @@
+<script setup>
+const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE'
+</script>
+
 <template>
     <section class="contact-section">
         <div class="contact-intro">
@@ -16,7 +20,7 @@
             <input
                 type="hidden"
                 name="access_key"
-                value="b564b69f-d1d1-4cf0-a79a-4eba504e7f72"
+                :value="accessKey"
             />
             <input
                 type="hidden"
@@ -35,6 +39,7 @@
                         class="form-input"
                         placeholder="Your name"
                         type="text"
+                        required
                     />
                 </div>
                 <div class="form-group">
@@ -45,6 +50,7 @@
                         class="form-input"
                         placeholder="Your email"
                         type="email"
+                        required
                     />
                 </div>
                 <div class="form-group">
@@ -54,6 +60,7 @@
                         id="message"
                         name="message"
                         placeholder="Your message"
+                        required
                     ></textarea>
                 </div>
             </div>
