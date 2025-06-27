@@ -1,28 +1,136 @@
 <script setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 
 // Form data
-const form = ref({
-  lastName: '',
-  email: '',
-  subject: '',
-  captcha: ''
+const form = reactive({ 
+  lastName: '', 
+  email: '', 
+  subject: '', 
+  captcha: '' 
 })
 
-// Form handlers
-const handleSubmit = (event) => {
-  // Form submission logic will be implemented here
-  console.log('Form submitted:', form.value)
+const errors = ref({})
+
+// Based on original zsValidateMandatoryFields
+function validate() {
+  const mandatoryFields = [
+    { key: 'lastName', name: 'Last Name' },
+    { key: 'email', name: 'Email' },
+    { key: 'subject', name: 'Subject' }
+  ]
+  
+  // Clear previous errors
+  errors.value = {}
+  
+  // Check mandatory fields
+  for (const field of mandatoryFields) {
+    const value = form[field.key]?.replace(/^\s+|\s+$/g, '') || ''
+    
+    if (value.length === 0) {
+      alert(`${field.name} cannot be empty`)
+      errors.value[field.key] = `${field.name} cannot be empty`
+      return false
+    }
+    
+    // Email validation
+    if (field.key === 'email') {
+      const emailRegex = /^([\w_][\w\-_.+'&]*)@(?=.{4,256}$)(([\w]+)([\-_]*[\w])*[\.])+[a-zA-Z]{2,22}$/
+      if (!value.match(emailRegex)) {
+        alert('Enter a valid email-Id')
+        errors.value[field.key] = 'Enter a valid email-Id'
+        return false
+      }
+    }
+  }
+  
+  // Check captcha
+  const captchaValue = form.captcha?.replace(/^\s+|\s+$/g, '') || ''
+  if (captchaValue.length === 0) {
+    alert('Please enter the captcha code.')
+    errors.value.captcha = 'Please enter the captcha code.'
+    return false
+  }
+  
+  return true
 }
 
-const handleReset = () => {
-  form.value = {
+// AJAX call copied from zsRegenerateCaptcha
+async function refreshCaptcha() {
+  try {
+    const response = await fetch(`https://desk.zoho.com/support/GenerateCaptcha?action=getNewCaptcha&_=${new Date().getTime()}`)
+    const data = await response.json()
+    
+    // Update captcha image and digest
+    const captchaImg = document.getElementById('zsCaptchaUrl')
+    const captchaDigest = document.getElementsByName('xJdfEaS')[0]
+    
+    if (captchaImg && data.captchaUrl) {
+      captchaImg.src = data.captchaUrl
+    }
+    
+    if (captchaDigest && data.captchaDigest) {
+      captchaDigest.value = data.captchaDigest
+    }
+    
+    // Show captcha div and hide loading
+    const loadingDiv = document.getElementById('zsCaptchaLoading')
+    const captchaDiv = document.getElementById('zsCaptcha')
+    
+    if (loadingDiv) loadingDiv.style.display = 'none'
+    if (captchaDiv) captchaDiv.style.display = 'block'
+    
+  } catch (error) {
+    console.error('Error refreshing captcha:', error)
+  }
+}
+
+// Native form submission
+function nativeSubmit() {
+  const formElement = document.getElementById('zsWebToCase_1148939000000379137')
+  const submitButton = document.getElementById('zsSubmitButton_1148939000000379137')
+  
+  if (submitButton) {
+    submitButton.setAttribute('disabled', 'disabled')
+  }
+  
+  if (formElement) {
+    formElement.submit()
+  }
+}
+
+function handleSubmit() { 
+  if (validate()) {
+    nativeSubmit()
+  }
+}
+
+function handleReset() { 
+  Object.assign(form, {
     lastName: '',
     email: '',
     subject: '',
     captcha: ''
+  })
+  
+  // Clear errors
+  errors.value = {}
+  
+  // Refresh captcha
+  refreshCaptcha()
+  
+  // Re-enable submit button
+  const submitButton = document.getElementById('zsSubmitButton_1148939000000379137')
+  if (submitButton) {
+    submitButton.removeAttribute('disabled')
   }
 }
+
+// Initialize captcha on component mount
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  refreshCaptcha()
+})
 </script>
 
 <template>
@@ -98,7 +206,7 @@ const handleReset = () => {
             </div>
             <div id='zsCaptcha' style='display:none;'>
               <img src='#' id='zsCaptchaUrl' name="zsCaptchaImage">
-              <a href='javascript:;' style='color:#00a3fe; cursor:pointer; margin-left:10px; vertical-align:middle;text-decoration: none;' class='zsFontClass' onclick='zsRegenerateCaptcha()'>Refresh</a>
+              <a href='javascript:;' style='color:#00a3fe; cursor:pointer; margin-left:10px; vertical-align:middle;text-decoration: none;' class='zsFontClass' @click='refreshCaptcha()'>Refresh</a>
             </div>
             <div>
               <input 
