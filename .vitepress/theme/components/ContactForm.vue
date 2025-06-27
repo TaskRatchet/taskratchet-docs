@@ -24,7 +24,7 @@
                 value="New Contact Form Submission from Web3Forms"
             />
             <input type="hidden" name="from_name" value="My Website" />
-            <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
+            <!-- More customization options available in the docs: https://docs.web3forms.com -->
 
             <div class="form-group-container">
                 <div class="form-group">
