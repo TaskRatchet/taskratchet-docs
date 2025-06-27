@@ -113,12 +113,10 @@
     background-color: transparent;
 }
 
-.form-input::placeholder,
 .form-textarea:focus-visible {
     color: rgb(60, 60, 67);
 }
 
-.dark .form-input::placeholder,
 .dark .form-textarea:focus-visible {
     color: rgba(255, 255, 245, 0.86);
 }
