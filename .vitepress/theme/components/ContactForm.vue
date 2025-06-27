@@ -1,5 +1,6 @@
 <script setup>
-const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE'
+console.log(import.meta.env);
+const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE";
 </script>
 
 <template>
@@ -17,11 +18,7 @@ const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE'
             action="https://api.web3forms.com/submit"
             method="POST"
         >
-            <input
-                type="hidden"
-                name="access_key"
-                :value="accessKey"
-            />
+            <input type="hidden" name="access_key" :value="accessKey" />
             <input
                 type="hidden"
                 name="subject"
