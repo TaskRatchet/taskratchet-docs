@@ -157,12 +157,6 @@ onMounted(() => {
 
       <table border='0' cellspacing='0' class='zsFormClass'>
         <tr>
-          <td colspan='2' class='zsFontClass'>
-            <strong>Web Form</strong>
-          </td>
-        </tr>
-        <br>
-        <tr>
           <td nowrap class='zsFontClass ' width='25%' align='left'>Last Name&nbsp;&nbsp;</td>
           <td align='left' width='75%'>
             <input
@@ -263,6 +257,18 @@ onMounted(() => {
     border: 1px solid #ddd;
     padding: 3px 5px;
     border-radius: 3px;
+    background-color: var(--vp-c-bg);
+    color: var(--vp-c-text-1);
+}
+
+/* Dark mode support */
+.dark #zohoSupportWebToCase textarea,
+.dark #zohoSupportWebToCase input[type='text'],
+.dark #zohoSupportWebToCase input[type='date'],
+.dark #zohoSupportWebToCase select {
+    border: 1px solid var(--vp-c-border);
+    background-color: var(--vp-c-bg-alt);
+    color: var(--vp-c-text-1);
 }
 
 #zohoSupportWebToCase select {
@@ -314,15 +320,36 @@ onMounted(() => {
     margin-right: 5px;
 }
 
-.zsFormClass {
-    background-color: #FFFFFF;
-    width: 600px
-}
-
 .zsFontClass {
-    color: #000000;
+    color: var(--vp-c-text-1);
     font-family: Arial;
     font-size: 13px
+}
+
+/* Dark mode table styles */
+.dark .zsFontClass {
+    color: var(--vp-c-text-1);
+}
+
+/* Dark mode link styles */
+.dark #zohoSupportWebToCase a {
+    color: var(--vp-c-brand-1);
+}
+
+/* Dark mode button styles */
+.dark #zohoSupportWebToCase input[type='submit'],
+.dark #zohoSupportWebToCase input[type='button'] {
+    background-color: var(--vp-c-bg-alt);
+    color: var(--vp-c-text-1);
+    border: 1px solid var(--vp-c-border);
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+
+.dark #zohoSupportWebToCase input[type='submit']:hover,
+.dark #zohoSupportWebToCase input[type='button']:hover {
+    background-color: var(--vp-c-brand-1);
+    color: var(--vp-c-white);
 }
 
 .manfieldbdr {
