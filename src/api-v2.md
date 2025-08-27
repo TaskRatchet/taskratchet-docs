@@ -29,14 +29,16 @@ Please reach out to support@taskratchet.com to get an API key.
 
 Base URL: <https://api.taskratchet.com/api2/>
 
-| Endpoint        | Description           |
-| --------------- | --------------------- |
-| `GET me`        | Get your profile data |
-| `DEL me`        | Delete your account   |
-| `GET me/tasks`  | Get all your tasks    |
-| `POST me/tasks` | Create a new task     |
+| Endpoint              | Description             |
+| --------------------- | ----------------------- |
+| `GET /api2/me`        | Get your profile data   |
+| `DELETE /api2/me`     | Delete your account     |
+| `GET /api2/me/tasks`  | Get all your tasks      |
+| `POST /api2/me/tasks` | Create a new task       |
+| `POST /api2/me/token` | Reset your API v2 token |
+| `GET /api2/me/token`  | Get your API v2 token   |
 
-### `GET me`
+### `GET /api2/me`
 
 | Response Field      | Type    | Description                                           |
 | ------------------- | ------- | ----------------------------------------------------- |
@@ -65,11 +67,11 @@ Example response:
 }
 ```
 
-### `DEL me`
+### `DELETE /api2/me`
 
 Deletes the user's account. This action is irreversible.
 
-### `GET me/tasks`
+### `GET /api2/me/tasks`
 
 Returns an array of tasks. This route is paginated.
 
@@ -104,7 +106,7 @@ Example response:
 ]
 ```
 
-### `POST me/tasks`
+### `POST /api2/me/tasks`
 
 Creates a new task. The request body should be a JSON object with the following fields:\
 
@@ -130,3 +132,13 @@ Example response:
   "status": "pending"
 }
 ```
+
+### `POST /api2/me/token`
+
+Reset your account's API v2 token. This will invalidate the old token and generate a new one.
+
+You'll need to be authenticted in order to reset your token. If you don't already have a token, contact support for help.
+
+### `GET /api2/me/token`
+
+Returns the current API v2 token for the authenticated user.
