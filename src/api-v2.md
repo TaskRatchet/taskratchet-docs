@@ -132,3 +132,13 @@ Example response:
   "status": "pending"
 }
 ```
+
+### `POST /api2/me/token`
+
+Reset your account's API v2 token. This will invalidate the old token and generate a new one.
+
+You'll need to be authenticted in order to reset your token. If you don't already have a token, contact support for help.
+
+### `GET /api2/me/token`
+
+Returns the current API v2 token for the authenticated user.
