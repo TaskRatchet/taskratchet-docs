@@ -29,12 +29,14 @@ Please reach out to support@taskratchet.com to get an API key.
 
 Base URL: <https://api.taskratchet.com/api2/>
 
-| Endpoint        | Description           |
-| --------------- | --------------------- |
-| `GET me`        | Get your profile data |
-| `DEL me`        | Delete your account   |
-| `GET me/tasks`  | Get all your tasks    |
-| `POST me/tasks` | Create a new task     |
+| Endpoint        | Description             |
+| --------------- | ----------------------- |
+| `GET me`        | Get your profile data   |
+| `DEL me`        | Delete your account     |
+| `GET me/tasks`  | Get all your tasks      |
+| `POST me/tasks` | Create a new task       |
+| `POST me/token` | Reset your API v2 token |
+| `GET me/token`  | Get your API v2 token   |
 
 ### `GET me`
 
