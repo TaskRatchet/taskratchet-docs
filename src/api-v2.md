@@ -29,10 +29,10 @@ Please reach out to support@taskratchet.com to get an API key.
 
 Base URL: <https://api.taskratchet.com/api2/>
 
-| Endpoint        | Description             |
-| --------------- | ----------------------- |
+| Endpoint              | Description             |
+| --------------------- | ----------------------- |
 | `GET /api2/me`        | Get your profile data   |
-| `DEL /api2/me`        | Delete your account     |
+| `DELETE /api2/me`     | Delete your account     |
 | `GET /api2/me/tasks`  | Get all your tasks      |
 | `POST /api2/me/tasks` | Create a new task       |
 | `POST /api2/me/token` | Reset your API v2 token |
@@ -67,7 +67,7 @@ Example response:
 }
 ```
 
-### `DEL /api2/me`
+### `DELETE /api2/me`
 
 Deletes the user's account. This action is irreversible.
 
