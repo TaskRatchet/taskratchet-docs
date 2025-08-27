@@ -31,14 +31,14 @@ Base URL: <https://api.taskratchet.com/api2/>
 
 | Endpoint        | Description             |
 | --------------- | ----------------------- |
-| `GET me`        | Get your profile data   |
-| `DEL me`        | Delete your account     |
-| `GET me/tasks`  | Get all your tasks      |
-| `POST me/tasks` | Create a new task       |
-| `POST me/token` | Reset your API v2 token |
-| `GET me/token`  | Get your API v2 token   |
+| `GET /api2/me`        | Get your profile data   |
+| `DEL /api2/me`        | Delete your account     |
+| `GET /api2/me/tasks`  | Get all your tasks      |
+| `POST /api2/me/tasks` | Create a new task       |
+| `POST /api2/me/token` | Reset your API v2 token |
+| `GET /api2/me/token`  | Get your API v2 token   |
 
-### `GET me`
+### `GET /api2/me`
 
 | Response Field      | Type    | Description                                           |
 | ------------------- | ------- | ----------------------------------------------------- |
@@ -67,11 +67,11 @@ Example response:
 }
 ```
 
-### `DEL me`
+### `DEL /api2/me`
 
 Deletes the user's account. This action is irreversible.
 
-### `GET me/tasks`
+### `GET /api2/me/tasks`
 
 Returns an array of tasks. This route is paginated.
 
@@ -106,7 +106,7 @@ Example response:
 ]
 ```
 
-### `POST me/tasks`
+### `POST /api2/me/tasks`
 
 Creates a new task. The request body should be a JSON object with the following fields:\
 
