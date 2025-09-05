@@ -1,7 +1,7 @@
 # API v1
 
-::: Warning
-This version of the API will be sunsetted soon. Please use [version 2](/api-v2) instead.
+::: warning
+This version of the API will be sunsetted on 2025-09-12. Please use [version 2](/api-v2) instead.
 :::
 
 TaskRatchet has an API you can use to list, update, and create new tasks, among other things.
