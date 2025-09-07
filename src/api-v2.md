@@ -1,7 +1,7 @@
 # API v2
 
 ::: warning
-This version of the API is unstable and undergoing active development. The
+This version of the API is in active development. The
 API and its associated documentation are likely to be incomplete and/or incorrect,
 and may change without notice.
 :::
