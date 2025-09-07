@@ -75,6 +75,17 @@ Deletes the user's account. This action is irreversible.
 
 Returns an array of tasks. This route is paginated.
 
+Query params:
+
+| Param      | Type   | Required | Description                                            |
+| ---------- | ------ | -------- | ------------------------------------------------------ |
+| page       | number | false    | Page number (default: 0)                               |
+| status     | string | false    | Filter by task status (pending, complete, expired)     |
+| due_before | number | false    | Unix timestamp; only return tasks due before this time |
+| due_after  | number | false    | Unix timestamp; only return tasks due after this time  |
+
+Response format:
+
 | Response Field | Type    | Description                                    |
 | -------------- | ------- | ---------------------------------------------- |
 | id             | string  | The task's unique identifier                   |
@@ -108,7 +119,7 @@ Example response:
 
 ### `POST /api2/me/tasks`
 
-Creates a new task. The request body should be a JSON object with the following fields:\
+Creates a new task. The request body should be a JSON object with the following fields:
 
 | Field           | Type   | Required | Description                           |
 | --------------- | ------ | -------- | ------------------------------------- |
