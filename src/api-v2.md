@@ -1,7 +1,7 @@
 # API v2
 
 ::: warning
-This version of the API is unstable and undergoing active development. The
+This version of the API is in active development. The
 API and its associated documentation are likely to be incomplete and/or incorrect,
 and may change without notice.
 :::
@@ -75,6 +75,17 @@ Deletes the user's account. This action is irreversible.
 
 Returns an array of tasks. This route is paginated.
 
+Query params:
+
+| Param      | Type   | Required | Description                                            |
+| ---------- | ------ | -------- | ------------------------------------------------------ |
+| page       | number | false    | Page number (default: 0)                               |
+| status     | string | false    | Filter by task status (pending, complete, expired)     |
+| due_before | number | false    | Unix timestamp; only return tasks due before this time |
+| due_after  | number | false    | Unix timestamp; only return tasks due after this time  |
+
+Response format:
+
 | Response Field | Type    | Description                                    |
 | -------------- | ------- | ---------------------------------------------- |
 | id             | string  | The task's unique identifier                   |
@@ -108,7 +119,7 @@ Example response:
 
 ### `POST /api2/me/tasks`
 
-Creates a new task. The request body should be a JSON object with the following fields:\
+Creates a new task. The request body should be a JSON object with the following fields:
 
 | Field           | Type   | Required | Description                           |
 | --------------- | ------ | -------- | ------------------------------------- |
@@ -137,7 +148,7 @@ Example response:
 
 Reset your account's API v2 token. This will invalidate the old token and generate a new one.
 
-You'll need to be authenticted in order to reset your token. If you don't already have a token, contact support for help.
+You'll need to be authenticated in order to reset your token. If you don't already have a token, contact support for help.
 
 ### `GET /api2/me/token`
 
